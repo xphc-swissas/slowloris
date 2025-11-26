@@ -1,4 +1,4 @@
-# slowloris.py - Simple slowloris in Python
+# slowloris.dart - Simple slowloris in Dart
 
 ## What is Slowloris?
 Slowloris is basically an HTTP Denial of Service attack that affects threaded servers. It works like this:
@@ -25,46 +25,42 @@ If you found this work useful, please cite it as
 
 ## How to install and run?
 
-You can clone the git repo or install using **pip**. Here's how you run it.
+You can clone the git repo and run using Dart. Here's how:
 
-* `sudo pip3 install slowloris`
-* `slowloris example.com`
+### Prerequisites
 
-That's all it takes to install and run slowloris.py.
+You need to have Dart SDK installed. You can download it from [dart.dev](https://dart.dev/get-dart).
 
-If you want to clone using git instead of pip, here's how you do it.
+### Installation
 
-* `git clone https://github.com/gkbrk/slowloris.git`
+* `git clone https://github.com/xphc-swissas/slowloris.git`
 * `cd slowloris`
-* `python3 slowloris.py example.com`
+* `dart pub get`
 
-### SOCKS5 proxy support
+### Running
 
-However, if you plan on using the `-x` option in order to use a SOCKS5 proxy for connecting instead of a direct connection over your IP address, you will need to install the `PySocks` library (or any other implementation of the `socks` library) as well. [`PySocks`](https://github.com/Anorov/PySocks) is a fork from [`SocksiPy`](http://socksipy.sourceforge.net/) by GitHub user @Anorov and can easily be installed by adding `PySocks` to the `pip` command above or running it again like so:
+* `dart run bin/slowloris.dart example.com`
 
-* `sudo pip3 install PySocks`
+Or you can compile it to a native executable:
 
-You can then use the `-x` option to activate SOCKS5 support and the `--proxy-host` and `--proxy-port` option to specify the SOCKS5 proxy host and its port, if they are different from the standard `127.0.0.1:8080`.
+* `dart compile exe bin/slowloris.dart -o slowloris`
+* `./slowloris example.com`
 
 ## Configuration options
 It is possible to modify the behaviour of slowloris with command-line
 arguments. In order to get an up-to-date help document, just run
-`slowloris -h`.
+`dart run bin/slowloris.dart --help`.
 
 * -p, --port
-* * Port of webserver, usually 80
+  * Port of webserver, usually 80
 * -s, --sockets
-* * Number of sockets to use in the test
+  * Number of sockets to use in the test
 * -v, --verbose
-* * Increases logging (output on terminal)
-* -ua, --randuseragents
-* * Randomizes user-agents with each request
-* -x, --useproxy
-* * Use a SOCKS5 proxy for connecting
-* --https
-* * Use HTTPS for the requests
+  * Increases logging (output on terminal)
+* -u, --randuseragents
+  * Randomizes user-agents with each request
 * --sleeptime
-* * Time to sleep between each header sent
+  * Time to sleep between each header sent
 
 ## License
 The code is licensed under the MIT License.
