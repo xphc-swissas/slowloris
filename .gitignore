@@ -12,3 +12,6 @@ build/
 # Build artifacts
 *.exe
 slowloris
+
+# FVM Version Cache
+.fvm/
