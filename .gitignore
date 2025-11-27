@@ -1,0 +1,14 @@
+# Dart generated files
+.dart_tool/
+.packages
+pubspec.lock
+build/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Build artifacts
+*.exe
+slowloris
