@@ -4,7 +4,7 @@ version: 0.2.6
 repository: https://github.com/xphc-swissas/slowloris
 
 environment:
-  sdk: ^3.10.2
+  sdk: ^3.10.0
 
 # Add regular dependencies here.
 dependencies:
